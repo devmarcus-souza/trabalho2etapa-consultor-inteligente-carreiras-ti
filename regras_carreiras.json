@@ -1,0 +1,2230 @@
+{
+  "versao": "2.0",
+  "descricao": "Base de conhecimento do Consultor Inteligente de Carreiras em TI (Etapa 2). Edite este arquivo para ajustar pesos, carreiras e conteúdos sem alterar o código Python.",
+  "parametros": {
+    "peso_afinidade": 0.8,
+    "peso_ferramentas": 0.08,
+    "peso_objetivos": 0.08,
+    "peso_preferencias": 0.04,
+    "peso_maximo_por_dimensao": 0.35,
+    "resposta_neutra": 3,
+    "minimo_dimensoes_respondidas": 5,
+    "margem_proximidade": 3.0,
+    "limite_clareza": 8.0,
+    "amplitude_perfil_equilibrado": 15.0,
+    "casas_decimais": 1,
+    "aviso_certificacoes": "Certificações são opcionais e não são exigidas em todas as vagas de nível Júnior. Antes de investir tempo ou dinheiro, confira no site do emissor se a certificação continua disponível, seus requisitos e seus custos atuais."
+  },
+  "escala": {
+    "1": "Muito baixa",
+    "2": "Baixa",
+    "3": "Moderada",
+    "4": "Alta",
+    "5": "Muito alta"
+  },
+  "dimensoes": [
+    {
+      "id": "logica",
+      "nome": "Lógica e programação",
+      "pergunta": "Quanto você gosta de resolver problemas com lógica e de escrever programas?"
+    },
+    {
+      "id": "matematica",
+      "nome": "Matemática e estatística",
+      "pergunta": "Qual é a sua afinidade com matemática, probabilidade e estatística?"
+    },
+    {
+      "id": "design",
+      "nome": "Design visual e experiência do usuário",
+      "pergunta": "Quanto você gosta de pensar na aparência, na usabilidade e na experiência de quem usa um produto?"
+    },
+    {
+      "id": "dados",
+      "nome": "Análise e organização de dados",
+      "pergunta": "Quanto você gosta de explorar, organizar e extrair informações de conjuntos de dados?"
+    },
+    {
+      "id": "infra",
+      "nome": "Infraestrutura, sistemas operacionais e redes",
+      "pergunta": "Qual é o seu interesse por servidores, sistemas operacionais e redes de computadores?"
+    },
+    {
+      "id": "seguranca",
+      "nome": "Segurança da informação",
+      "pergunta": "Quanto você se interessa por proteger sistemas e dados e por entender como ataques acontecem?"
+    },
+    {
+      "id": "automacao",
+      "nome": "Automação de tarefas",
+      "pergunta": "Quanto você gosta de automatizar tarefas repetitivas com scripts e ferramentas?"
+    },
+    {
+      "id": "testes",
+      "nome": "Testes e qualidade de software",
+      "pergunta": "Quanto você gosta de testar sistemas, procurar falhas e garantir que tudo funcione como esperado?"
+    },
+    {
+      "id": "mobile",
+      "nome": "Desenvolvimento de aplicativos móveis",
+      "pergunta": "Qual é o seu interesse em criar aplicativos para celulares e tablets?"
+    },
+    {
+      "id": "negocios",
+      "nome": "Negócios, planejamento e necessidades dos usuários",
+      "pergunta": "Quanto você gosta de entender problemas de usuários, planejar e priorizar o que será construído?"
+    }
+  ],
+  "niveis_conhecimento": [
+    {
+      "id": "iniciante",
+      "ordem": 0,
+      "nome": "Iniciante",
+      "descricao": "Estou começando; tenho pouca ou nenhuma prática em TI."
+    },
+    {
+      "id": "basico",
+      "ordem": 1,
+      "nome": "Básico",
+      "descricao": "Já fiz exercícios e pequenos programas ou configurações."
+    },
+    {
+      "id": "intermediario",
+      "ordem": 2,
+      "nome": "Intermediário",
+      "descricao": "Já desenvolvi projetos próprios ou acadêmicos completos."
+    },
+    {
+      "id": "avancado",
+      "ordem": 3,
+      "nome": "Avançado",
+      "descricao": "Tenho experiência consistente em projetos reais."
+    }
+  ],
+  "experiencias": [
+    {
+      "id": "nenhuma",
+      "nome": "Nenhuma experiência prévia"
+    },
+    {
+      "id": "cursos",
+      "nome": "Cursos online ou bootcamps"
+    },
+    {
+      "id": "academicos",
+      "nome": "Projetos acadêmicos"
+    },
+    {
+      "id": "pessoais",
+      "nome": "Projetos pessoais ou open source"
+    },
+    {
+      "id": "estagio",
+      "nome": "Estágio na área de TI"
+    },
+    {
+      "id": "trabalho",
+      "nome": "Trabalho formal em TI"
+    }
+  ],
+  "ferramentas": [
+    {
+      "id": "python",
+      "nome": "Python",
+      "relevancia": {
+        "backend": 0.6,
+        "data_science": 0.8,
+        "data_engineering": 0.7,
+        "devops": 0.4,
+        "security": 0.4,
+        "qa": 0.3
+      }
+    },
+    {
+      "id": "java_csharp",
+      "nome": "Java ou C#",
+      "relevancia": {
+        "backend": 0.8,
+        "mobile": 0.3,
+        "qa": 0.2
+      }
+    },
+    {
+      "id": "javascript",
+      "nome": "JavaScript ou TypeScript",
+      "relevancia": {
+        "frontend": 0.8,
+        "backend": 0.3,
+        "mobile": 0.4,
+        "qa": 0.3
+      }
+    },
+    {
+      "id": "html_css",
+      "nome": "HTML e CSS",
+      "relevancia": {
+        "frontend": 1.0,
+        "qa": 0.2
+      }
+    },
+    {
+      "id": "figma",
+      "nome": "Figma ou outra ferramenta de prototipação",
+      "relevancia": {
+        "frontend": 0.7,
+        "mobile": 0.4,
+        "product": 0.5
+      }
+    },
+    {
+      "id": "sql",
+      "nome": "SQL e bancos de dados",
+      "relevancia": {
+        "backend": 0.6,
+        "data_engineering": 1.0,
+        "data_science": 0.5,
+        "product": 0.2,
+        "qa": 0.3
+      }
+    },
+    {
+      "id": "git",
+      "nome": "Git e GitHub",
+      "relevancia": {
+        "backend": 0.3,
+        "frontend": 0.3,
+        "mobile": 0.3,
+        "devops": 0.5,
+        "qa": 0.3,
+        "data_engineering": 0.3,
+        "cloud": 0.2
+      }
+    },
+    {
+      "id": "linux",
+      "nome": "Linux e linha de comando",
+      "relevancia": {
+        "devops": 0.8,
+        "security": 0.8,
+        "cloud": 0.7,
+        "backend": 0.3,
+        "data_engineering": 0.3
+      }
+    },
+    {
+      "id": "redes",
+      "nome": "Redes de computadores (TCP/IP, DNS, HTTP)",
+      "relevancia": {
+        "security": 0.8,
+        "cloud": 0.8,
+        "devops": 0.5
+      }
+    },
+    {
+      "id": "apis_rest",
+      "nome": "APIs REST (consumo ou criação)",
+      "relevancia": {
+        "backend": 0.8,
+        "frontend": 0.4,
+        "mobile": 0.5,
+        "qa": 0.5
+      }
+    },
+    {
+      "id": "docker",
+      "nome": "Docker e contêineres",
+      "relevancia": {
+        "devops": 1.0,
+        "backend": 0.4,
+        "cloud": 0.5,
+        "data_engineering": 0.3
+      }
+    },
+    {
+      "id": "ci_cd",
+      "nome": "CI/CD (GitHub Actions, GitLab CI, Jenkins...)",
+      "relevancia": {
+        "devops": 1.0,
+        "qa": 0.5,
+        "backend": 0.3,
+        "cloud": 0.3
+      }
+    },
+    {
+      "id": "nuvem",
+      "nome": "AWS, Azure ou Google Cloud",
+      "relevancia": {
+        "cloud": 1.0,
+        "devops": 0.6,
+        "data_engineering": 0.4,
+        "backend": 0.3,
+        "security": 0.3
+      }
+    },
+    {
+      "id": "iac",
+      "nome": "Infraestrutura como código (Terraform, CloudFormation...)",
+      "relevancia": {
+        "cloud": 0.8,
+        "devops": 0.9,
+        "security": 0.2
+      }
+    },
+    {
+      "id": "mobile_framework",
+      "nome": "Flutter, React Native, Kotlin ou Swift",
+      "relevancia": {
+        "mobile": 1.0,
+        "frontend": 0.3
+      }
+    },
+    {
+      "id": "testes_auto",
+      "nome": "Ferramentas de testes automatizados (pytest, Selenium, Cypress...)",
+      "relevancia": {
+        "qa": 1.0,
+        "devops": 0.3,
+        "backend": 0.3,
+        "frontend": 0.3,
+        "mobile": 0.3
+      }
+    },
+    {
+      "id": "data_libs",
+      "nome": "Pandas e NumPy",
+      "relevancia": {
+        "data_science": 1.0,
+        "data_engineering": 0.4
+      }
+    },
+    {
+      "id": "ml_libs",
+      "nome": "scikit-learn, TensorFlow ou PyTorch",
+      "relevancia": {
+        "data_science": 1.0
+      }
+    },
+    {
+      "id": "estatistica",
+      "nome": "Estatística aplicada",
+      "relevancia": {
+        "data_science": 0.9,
+        "product": 0.2
+      }
+    },
+    {
+      "id": "etl",
+      "nome": "ETL/ELT (Airflow, dbt, Spark...)",
+      "relevancia": {
+        "data_engineering": 1.0,
+        "data_science": 0.3
+      }
+    },
+    {
+      "id": "seg_ferramentas",
+      "nome": "Ferramentas de segurança (Nmap, Wireshark, Burp Suite...)",
+      "relevancia": {
+        "security": 1.0,
+        "devops": 0.2,
+        "qa": 0.2
+      }
+    },
+    {
+      "id": "agil",
+      "nome": "Ferramentas ágeis (Jira, Trello, Scrum/Kanban)",
+      "relevancia": {
+        "product": 0.8,
+        "qa": 0.4,
+        "devops": 0.1
+      }
+    },
+    {
+      "id": "monitoramento",
+      "nome": "Monitoramento (Prometheus, Grafana ou similares)",
+      "relevancia": {
+        "devops": 0.9,
+        "cloud": 0.5,
+        "security": 0.3
+      }
+    },
+    {
+      "id": "planilhas_bi",
+      "nome": "Excel, Power BI ou ferramentas de BI",
+      "relevancia": {
+        "product": 0.5,
+        "data_science": 0.4,
+        "data_engineering": 0.3
+      }
+    }
+  ],
+  "objetivos": [
+    {
+      "id": "construir_sistemas",
+      "nome": "Construir sistemas e serviços (APIs, regras de negócio)",
+      "relevancia": {
+        "backend": 1.0,
+        "data_engineering": 0.4,
+        "mobile": 0.3,
+        "devops": 0.2
+      }
+    },
+    {
+      "id": "criar_interfaces",
+      "nome": "Criar interfaces e experiências para usuários",
+      "relevancia": {
+        "frontend": 1.0,
+        "mobile": 0.6,
+        "product": 0.4
+      }
+    },
+    {
+      "id": "gerar_insights",
+      "nome": "Extrair conhecimento e previsões a partir de dados",
+      "relevancia": {
+        "data_science": 1.0,
+        "data_engineering": 0.5,
+        "product": 0.3
+      }
+    },
+    {
+      "id": "construir_pipelines",
+      "nome": "Construir e manter a infraestrutura de dados de uma organização",
+      "relevancia": {
+        "data_engineering": 1.0,
+        "data_science": 0.4,
+        "backend": 0.3,
+        "cloud": 0.3
+      }
+    },
+    {
+      "id": "proteger",
+      "nome": "Proteger sistemas e informações",
+      "relevancia": {
+        "security": 1.0,
+        "cloud": 0.4,
+        "devops": 0.3,
+        "qa": 0.2
+      }
+    },
+    {
+      "id": "operar_confiavel",
+      "nome": "Garantir que os sistemas rodem de forma confiável e automatizada",
+      "relevancia": {
+        "devops": 1.0,
+        "cloud": 0.6,
+        "security": 0.3
+      }
+    },
+    {
+      "id": "arquitetar_nuvem",
+      "nome": "Projetar infraestrutura e arquitetura em nuvem",
+      "relevancia": {
+        "cloud": 1.0,
+        "devops": 0.6,
+        "security": 0.3,
+        "data_engineering": 0.2
+      }
+    },
+    {
+      "id": "criar_apps",
+      "nome": "Criar aplicativos móveis",
+      "relevancia": {
+        "mobile": 1.0,
+        "frontend": 0.5
+      }
+    },
+    {
+      "id": "garantir_qualidade",
+      "nome": "Garantir a qualidade do software",
+      "relevancia": {
+        "qa": 1.0,
+        "devops": 0.3,
+        "backend": 0.2,
+        "frontend": 0.2
+      }
+    },
+    {
+      "id": "definir_produtos",
+      "nome": "Definir o que construir e conduzir a evolução de produtos",
+      "relevancia": {
+        "product": 1.0,
+        "frontend": 0.3,
+        "data_science": 0.2
+      }
+    },
+    {
+      "id": "explorando",
+      "nome": "Ainda estou explorando, sem objetivo definido",
+      "relevancia": {}
+    }
+  ],
+  "preferencias": [
+    {
+      "id": "pessoas",
+      "nome": "Trabalhar em contato próximo com usuários e áreas de negócio",
+      "relevancia": {
+        "product": 0.9,
+        "frontend": 0.5,
+        "qa": 0.4,
+        "mobile": 0.3
+      }
+    },
+    {
+      "id": "codigo",
+      "nome": "Passar a maior parte do tempo escrevendo código",
+      "relevancia": {
+        "backend": 0.9,
+        "mobile": 0.8,
+        "frontend": 0.8,
+        "data_engineering": 0.6,
+        "data_science": 0.5
+      }
+    },
+    {
+      "id": "investigacao",
+      "nome": "Investigar problemas e analisar evidências",
+      "relevancia": {
+        "security": 1.0,
+        "data_science": 0.7,
+        "qa": 0.6,
+        "devops": 0.4
+      }
+    },
+    {
+      "id": "infraestrutura",
+      "nome": "Trabalhar com servidores, redes e ambientes de execução",
+      "relevancia": {
+        "cloud": 1.0,
+        "devops": 1.0,
+        "security": 0.6,
+        "data_engineering": 0.3
+      }
+    },
+    {
+      "id": "visual",
+      "nome": "Trabalhar com aspectos visuais e de interação",
+      "relevancia": {
+        "frontend": 1.0,
+        "mobile": 0.6,
+        "product": 0.4
+      }
+    },
+    {
+      "id": "plantao",
+      "nome": "Aceitar responsabilidades de monitoramento e resposta a incidentes",
+      "relevancia": {
+        "devops": 1.0,
+        "security": 0.7,
+        "cloud": 0.6
+      }
+    },
+    {
+      "id": "experimentos",
+      "nome": "Trabalhar com experimentos, hipóteses e modelos",
+      "relevancia": {
+        "data_science": 1.0
+      }
+    }
+  ],
+  "regras_inferencia": [
+    {
+      "id": "R01",
+      "nome": "Dados + programação",
+      "condicoes": [
+        {
+          "campo": "dados",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "logica",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "data_science",
+        "data_engineering",
+        "backend"
+      ],
+      "mensagem": "Você tem forte afinidade tanto por dados quanto por programação. Esse perfil híbrido costuma se encaixar em Ciência de Dados (modelagem e análise), Engenharia de Dados (pipelines) e Back-end (serviços); compare as três trilhas."
+    },
+    {
+      "id": "R02",
+      "nome": "Design + mobile",
+      "condicoes": [
+        {
+          "campo": "design",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "mobile",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "mobile",
+        "frontend"
+      ],
+      "mensagem": "Design e aplicativos móveis são áreas vizinhas: Desenvolvimento Mobile e Front-end/UI-UX compartilham interfaces e experiência de uso."
+    },
+    {
+      "id": "R03",
+      "nome": "Infraestrutura + segurança",
+      "condicoes": [
+        {
+          "campo": "infra",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "seguranca",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "security",
+        "cloud",
+        "devops"
+      ],
+      "mensagem": "Infraestrutura e segurança caminham juntas: Cibersegurança, Cloud e DevOps/SRE exigem conhecimentos de redes, Linux e boas práticas de proteção."
+    },
+    {
+      "id": "R04",
+      "nome": "Infraestrutura + automação",
+      "condicoes": [
+        {
+          "campo": "infra",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "automacao",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "devops",
+        "cloud"
+      ],
+      "mensagem": "Interesse por infraestrutura e automação indica DevOps/SRE e Cloud como trilhas naturais."
+    },
+    {
+      "id": "R05",
+      "nome": "Testes + automação",
+      "condicoes": [
+        {
+          "campo": "testes",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "automacao",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "qa",
+        "devops"
+      ],
+      "mensagem": "Testes e automação combinam com QA (automação de testes) e também com DevOps (pipelines de integração contínua)."
+    },
+    {
+      "id": "R06",
+      "nome": "Negócios + design",
+      "condicoes": [
+        {
+          "campo": "negocios",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "design",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "product",
+        "frontend"
+      ],
+      "mensagem": "Interesse em usuários e em design aproxima Gestão de Produtos e Front-end/UX."
+    },
+    {
+      "id": "R07",
+      "nome": "Negócios + dados",
+      "condicoes": [
+        {
+          "campo": "negocios",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "dados",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "product",
+        "data_science"
+      ],
+      "mensagem": "Negócios e dados combinam em Gestão de Produtos (decisões orientadas por métricas) e em Ciência de Dados."
+    },
+    {
+      "id": "R08",
+      "nome": "Matemática + dados",
+      "condicoes": [
+        {
+          "campo": "matematica",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "dados",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "data_science"
+      ],
+      "mensagem": "Afinidade com matemática e dados favorece Ciência de Dados e Machine Learning."
+    },
+    {
+      "id": "R09",
+      "nome": "Pouca programação + negócios",
+      "condicoes": [
+        {
+          "campo": "logica",
+          "operador": "<=",
+          "valor": 2
+        },
+        {
+          "campo": "negocios",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "product",
+        "qa"
+      ],
+      "mensagem": "Baixa afinidade com programação e alta com negócios sugere trilhas menos centradas em código, como Gestão de Produtos e QA (testes manuais e exploratórios)."
+    },
+    {
+      "id": "R10",
+      "nome": "Iniciante sem ferramentas",
+      "condicoes": [
+        {
+          "campo": "nivel",
+          "operador": "==",
+          "valor": 0
+        },
+        {
+          "campo": "num_ferramentas",
+          "operador": "==",
+          "valor": 0
+        }
+      ],
+      "carreiras": [],
+      "mensagem": "Como você está começando e ainda não declarou ferramentas, o resultado se apoia quase só nas suas afinidades. Trate-o como ponto de partida e experimente projetos curtos antes de escolher uma trilha."
+    },
+    {
+      "id": "R11",
+      "nome": "Segurança + programação",
+      "condicoes": [
+        {
+          "campo": "seguranca",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "logica",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "security",
+        "backend"
+      ],
+      "mensagem": "Segurança com programação abre caminho para Cibersegurança (desenvolvimento seguro e análise de vulnerabilidades) e para Back-end com foco em segurança."
+    },
+    {
+      "id": "R12",
+      "nome": "Automação + programação",
+      "condicoes": [
+        {
+          "campo": "automacao",
+          "operador": ">=",
+          "valor": 4
+        },
+        {
+          "campo": "logica",
+          "operador": ">=",
+          "valor": 4
+        }
+      ],
+      "carreiras": [
+        "devops",
+        "data_engineering",
+        "backend"
+      ],
+      "mensagem": "Automação com programação é útil em DevOps/SRE, Engenharia de Dados e Back-end."
+    },
+    {
+      "id": "R13",
+      "nome": "Respostas moderadas",
+      "condicoes": [
+        {
+          "campo": "media_respostas",
+          "operador": ">=",
+          "valor": 2.5
+        },
+        {
+          "campo": "media_respostas",
+          "operador": "<=",
+          "valor": 3.5
+        },
+        {
+          "campo": "amplitude_respostas",
+          "operador": "<=",
+          "valor": 2
+        }
+      ],
+      "carreiras": [],
+      "mensagem": "Suas respostas ficaram predominantemente moderadas, sem grandes picos de interesse. É normal nessa fase: o ranking mostra pequenas tendências, não uma vocação definida."
+    },
+    {
+      "id": "R14",
+      "nome": "Interesses equilibrados e altos",
+      "condicoes": [
+        {
+          "campo": "media_respostas",
+          "operador": ">=",
+          "valor": 3.8
+        },
+        {
+          "campo": "amplitude_respostas",
+          "operador": "<=",
+          "valor": 2
+        }
+      ],
+      "carreiras": [],
+      "mensagem": "Você declarou interesse alto em quase todas as áreas. O modelo não encontra uma área que se destaque; considere comparar as trilhas pelas atividades do dia a dia e pelos projetos de portfólio sugeridos."
+    }
+  ],
+  "carreiras": {
+    "backend": {
+      "nome": "Desenvolvimento Back-end",
+      "descricao": "Constrói a parte do sistema que roda no servidor: regras de negócio, APIs, integração com bancos de dados e proteção dos dados.",
+      "caracteristicas": [
+        "Foco em lógica, arquitetura e regras de negócio",
+        "Trabalho com APIs, bancos de dados e integrações",
+        "Atenção a desempenho, segurança e manutenção do código",
+        "Colaboração frequente com front-end, dados e DevOps"
+      ],
+      "pesos": {
+        "logica": 9,
+        "matematica": 3,
+        "design": 0,
+        "dados": 6,
+        "infra": 3,
+        "seguranca": 4,
+        "automacao": 4,
+        "testes": 5,
+        "mobile": 1,
+        "negocios": 3
+      },
+      "competencias_junior": [
+        {
+          "id": "linguagem",
+          "nome": "Linguagem back-end e lógica de programação",
+          "descricao": "Dominar uma linguagem (Python, Java, C#, Node.js...) e estruturas de dados básicas.",
+          "ferramentas_relacionadas": [
+            "python",
+            "java_csharp"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "apis_rest",
+          "nome": "APIs REST",
+          "descricao": "Criar endpoints, tratar requisições HTTP, validar dados e documentar a API.",
+          "ferramentas_relacionadas": [
+            "apis_rest"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "sql",
+          "nome": "SQL e modelagem relacional",
+          "descricao": "Modelar tabelas, escrever consultas com junções e entender transações e índices.",
+          "ferramentas_relacionadas": [
+            "sql"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "autenticacao",
+          "nome": "Autenticação e autorização",
+          "descricao": "Implementar login, sessões ou tokens e controle de acesso por perfil.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "testes",
+          "nome": "Testes automatizados",
+          "descricao": "Escrever testes unitários e de integração para as regras de negócio e endpoints.",
+          "ferramentas_relacionadas": [
+            "testes_auto"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "git",
+          "nome": "Git e trabalho colaborativo",
+          "descricao": "Usar branches, commits descritivos e pull requests.",
+          "ferramentas_relacionadas": [
+            "git"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Uma linguagem back-end e seu framework web",
+        "Estruturas de dados e algoritmos básicos",
+        "Protocolo HTTP e APIs REST",
+        "SQL e modelagem relacional",
+        "Autenticação e autorização",
+        "Testes automatizados",
+        "Git e GitHub"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Lógica de programação, estruturas de dados e algoritmos básicos",
+          "Orientação a objetos e boas práticas de código",
+          "Como a web funciona: HTTP, requisições e respostas",
+          "Terminal e Git básicos"
+        ],
+        "ferramentas_prioritarias": [
+          "Uma linguagem e um framework web (por exemplo Python com FastAPI, Flask ou Django; Java com Spring; ou Node.js com Express)",
+          "SQL com um banco relacional como PostgreSQL ou MySQL",
+          "Postman, Insomnia ou ferramenta similar para testar APIs"
+        ],
+        "competencias_intermediarias": [
+          "Modelagem de banco de dados e migrações",
+          "Autenticação (sessões ou JWT) e controle de acesso",
+          "Testes unitários e de integração",
+          "Noções de Docker e variáveis de ambiente"
+        ],
+        "praticas_exercicios": [
+          "Resolver exercícios de algoritmos e de consultas SQL",
+          "Construir CRUDs com validação de dados",
+          "Escrever testes para cada endpoint criado",
+          "Ler e comentar o código de projetos de código aberto"
+        ],
+        "oportunidades_junior": [
+          "Publicar o projeto de portfólio com README claro e instruções de execução",
+          "Manter um GitHub organizado, com commits descritivos",
+          "Buscar vagas de estágio ou Júnior em back-end e adaptar o currículo ao projeto",
+          "Praticar a explicação do projeto em entrevistas técnicas"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "AWS Certified Developer – Associate",
+          "emissor": "Amazon Web Services",
+          "observacao": "Útil se a vaga usar a nuvem da AWS."
+        },
+        {
+          "nome": "Microsoft Certified: Azure Developer Associate",
+          "emissor": "Microsoft",
+          "observacao": "Útil se a vaga usar o ecossistema Azure."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "API REST de gerenciamento de tarefas com autenticação",
+        "descricao": "API com cadastro de usuários, login, CRUD de tarefas, banco relacional, testes automatizados e documentação (OpenAPI/Swagger).",
+        "entregaveis": [
+          "Repositório no GitHub com README",
+          "Endpoints documentados",
+          "Testes automatizados",
+          "Instruções de execução (Docker é opcional)"
+        ]
+      }
+    },
+    "frontend": {
+      "nome": "Desenvolvimento Front-end e UI/UX",
+      "descricao": "Cria as interfaces com as quais as pessoas interagem, combinando código, design visual, usabilidade e acessibilidade.",
+      "caracteristicas": [
+        "Foco em interface, usabilidade e experiência do usuário",
+        "Combinação de programação e sensibilidade visual",
+        "Preocupação com acessibilidade e responsividade",
+        "Colaboração próxima com designers, produto e back-end"
+      ],
+      "pesos": {
+        "logica": 6,
+        "matematica": 1,
+        "design": 10,
+        "dados": 2,
+        "infra": 0,
+        "seguranca": 2,
+        "automacao": 2,
+        "testes": 4,
+        "mobile": 3,
+        "negocios": 5
+      },
+      "competencias_junior": [
+        {
+          "id": "html_css",
+          "nome": "HTML e CSS",
+          "descricao": "Estruturar páginas semânticas e estilizá-las com CSS moderno (flexbox e grid).",
+          "ferramentas_relacionadas": [
+            "html_css"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "javascript",
+          "nome": "JavaScript",
+          "descricao": "Manipular o DOM, tratar eventos e usar JavaScript moderno (ES6+).",
+          "ferramentas_relacionadas": [
+            "javascript"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "responsividade",
+          "nome": "Design responsivo",
+          "descricao": "Adaptar layouts a celulares, tablets e desktops.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "acessibilidade",
+          "nome": "Acessibilidade web",
+          "descricao": "Aplicar boas práticas de contraste, teclado, leitores de tela e semântica (WCAG).",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        },
+        {
+          "id": "ux_prototipacao",
+          "nome": "Fundamentos de UX e prototipação",
+          "descricao": "Entender fluxos de usuário, hierarquia visual e criar protótipos.",
+          "ferramentas_relacionadas": [
+            "figma"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "consumo_api",
+          "nome": "Consumo de APIs",
+          "descricao": "Buscar e exibir dados de APIs REST, tratando carregamento e erros.",
+          "ferramentas_relacionadas": [
+            "apis_rest"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "git",
+          "nome": "Git e trabalho colaborativo",
+          "descricao": "Usar branches, commits descritivos e pull requests.",
+          "ferramentas_relacionadas": [
+            "git"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "HTML semântico e CSS",
+        "JavaScript moderno",
+        "Um framework de interface (React, Vue ou Angular)",
+        "Design responsivo e acessibilidade",
+        "Princípios de UX e prototipação",
+        "Consumo de APIs",
+        "Git e GitHub"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "HTML semântico e CSS (flexbox e grid)",
+          "Lógica de programação com JavaScript",
+          "Princípios de design: hierarquia, contraste, tipografia e cores",
+          "Como o navegador renderiza uma página"
+        ],
+        "ferramentas_prioritarias": [
+          "JavaScript moderno (ES6+) e, depois, TypeScript",
+          "Um framework de interface, como React",
+          "Figma para prototipar telas",
+          "DevTools do navegador"
+        ],
+        "competencias_intermediarias": [
+          "Design responsivo e abordagem mobile-first",
+          "Acessibilidade (WCAG, navegação por teclado, ARIA)",
+          "Consumo de APIs e gerenciamento de estado",
+          "Testes de componentes"
+        ],
+        "praticas_exercicios": [
+          "Reproduzir interfaces de sites conhecidos para treinar CSS",
+          "Prototipar uma tela no Figma e implementá-la em código",
+          "Auditar uma página com ferramentas de acessibilidade",
+          "Pedir feedback de usuários reais sobre uma interface sua"
+        ],
+        "oportunidades_junior": [
+          "Publicar o portfólio online (GitHub Pages ou similar)",
+          "Documentar decisões de design e de código em cada projeto",
+          "Buscar vagas de estágio ou Júnior em front-end e UI/UX",
+          "Participar de comunidades e projetos de código aberto"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "Google UX Design Professional Certificate",
+          "emissor": "Google (via Coursera)",
+          "observacao": "Voltado a quem quer UX; é um certificado de curso."
+        },
+        {
+          "nome": "Meta Front-End Developer Professional Certificate",
+          "emissor": "Meta (via Coursera)",
+          "observacao": "Certificado de curso; verifique se ainda está disponível."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Aplicação web responsiva e acessível com protótipo no Figma",
+        "descricao": "Interface de uma aplicação real (por exemplo, catálogo de receitas ou agenda), com protótipo prévio, layout responsivo, consumo de uma API pública e checklist de acessibilidade.",
+        "entregaveis": [
+          "Protótipo no Figma",
+          "Aplicação publicada online",
+          "Repositório com README",
+          "Relatório curto de acessibilidade"
+        ]
+      }
+    },
+    "data_science": {
+      "nome": "Ciência de Dados e Machine Learning",
+      "descricao": "Usa estatística, programação e modelos de aprendizado de máquina para extrair conhecimento de dados e apoiar decisões e previsões.",
+      "caracteristicas": [
+        "Forte base em matemática e estatística",
+        "Análise exploratória e construção de modelos",
+        "Comunicação de resultados para pessoas não técnicas",
+        "Experimentação, hipóteses e validação"
+      ],
+      "pesos": {
+        "logica": 6,
+        "matematica": 10,
+        "design": 1,
+        "dados": 10,
+        "infra": 1,
+        "seguranca": 1,
+        "automacao": 3,
+        "testes": 2,
+        "mobile": 0,
+        "negocios": 4
+      },
+      "competencias_junior": [
+        {
+          "id": "python",
+          "nome": "Python para dados",
+          "descricao": "Programar em Python com foco em análise de dados.",
+          "ferramentas_relacionadas": [
+            "python"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "estatistica",
+          "nome": "Estatística",
+          "descricao": "Estatística descritiva, probabilidade, distribuições e testes de hipótese.",
+          "ferramentas_relacionadas": [
+            "estatistica"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "eda",
+          "nome": "Análise exploratória de dados",
+          "descricao": "Limpar, transformar e explorar dados com Pandas e NumPy.",
+          "ferramentas_relacionadas": [
+            "data_libs"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "ml_fundamentos",
+          "nome": "Fundamentos de Machine Learning",
+          "descricao": "Regressão, classificação, validação cruzada, métricas e sobreajuste.",
+          "ferramentas_relacionadas": [
+            "ml_libs"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "sql",
+          "nome": "SQL",
+          "descricao": "Extrair dados de bancos relacionais.",
+          "ferramentas_relacionadas": [
+            "sql"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "visualizacao",
+          "nome": "Visualização e comunicação de resultados",
+          "descricao": "Criar gráficos claros e contar a história dos dados.",
+          "ferramentas_relacionadas": [
+            "planilhas_bi"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Python, Pandas e NumPy",
+        "Estatística e probabilidade",
+        "Visualização de dados",
+        "Fundamentos de Machine Learning (scikit-learn)",
+        "SQL",
+        "Notebooks Jupyter",
+        "Git e GitHub"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Python básico e lógica de programação",
+          "Estatística descritiva e probabilidade",
+          "Álgebra linear e cálculo em nível introdutório",
+          "Como formular perguntas que os dados podem responder"
+        ],
+        "ferramentas_prioritarias": [
+          "Python com Pandas e NumPy",
+          "Matplotlib, Seaborn ou Plotly para visualização",
+          "Jupyter Notebook",
+          "SQL para extrair dados"
+        ],
+        "competencias_intermediarias": [
+          "Análise exploratória e tratamento de dados ausentes",
+          "Modelos supervisionados e não supervisionados com scikit-learn",
+          "Validação de modelos e métricas",
+          "Inferência estatística e testes de hipótese"
+        ],
+        "praticas_exercicios": [
+          "Analisar conjuntos de dados públicos e escrever conclusões",
+          "Participar de competições para iniciantes em plataformas de dados",
+          "Reproduzir análises publicadas e comparar resultados",
+          "Explicar um modelo para alguém sem formação técnica"
+        ],
+        "oportunidades_junior": [
+          "Publicar notebooks bem documentados no GitHub",
+          "Escrever um resumo executivo para cada projeto",
+          "Buscar vagas de estágio ou Júnior em análise ou ciência de dados",
+          "Praticar a apresentação de resultados em linguagem de negócio"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "Microsoft Certified: Azure Data Scientist Associate (DP-100)",
+          "emissor": "Microsoft",
+          "observacao": "Voltada a quem usa Azure; confira a disponibilidade atual."
+        },
+        {
+          "nome": "Databricks Certified Machine Learning Associate",
+          "emissor": "Databricks",
+          "observacao": "Voltada a quem usa a plataforma Databricks."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Análise e modelo preditivo sobre um conjunto de dados público",
+        "descricao": "Projeto completo: pergunta de negócio, limpeza e análise exploratória, modelo com validação, interpretação dos resultados e limitações.",
+        "entregaveis": [
+          "Notebook documentado",
+          "Visualizações claras",
+          "Relatório com conclusões e limitações",
+          "Repositório com README e instruções de execução"
+        ]
+      }
+    },
+    "data_engineering": {
+      "nome": "Engenharia de Dados",
+      "descricao": "Projeta e mantém pipelines e estruturas que coletam, transformam e disponibilizam dados confiáveis para análises e modelos.",
+      "caracteristicas": [
+        "Foco em pipelines, ETL/ELT e armazenamento de dados",
+        "Programação combinada com bancos de dados",
+        "Preocupação com qualidade, escala e confiabilidade",
+        "Apoio direto a times de análise e ciência de dados"
+      ],
+      "pesos": {
+        "logica": 7,
+        "matematica": 3,
+        "design": 0,
+        "dados": 10,
+        "infra": 6,
+        "seguranca": 3,
+        "automacao": 7,
+        "testes": 4,
+        "mobile": 0,
+        "negocios": 2
+      },
+      "competencias_junior": [
+        {
+          "id": "sql",
+          "nome": "SQL",
+          "descricao": "Consultas avançadas, junções, janelas e otimização básica.",
+          "ferramentas_relacionadas": [
+            "sql"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "python",
+          "nome": "Python para manipulação de dados",
+          "descricao": "Scripts de extração e transformação de dados.",
+          "ferramentas_relacionadas": [
+            "python"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "etl",
+          "nome": "ETL/ELT e orquestração",
+          "descricao": "Construir pipelines com extração, transformação, carga e agendamento.",
+          "ferramentas_relacionadas": [
+            "etl"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "modelagem",
+          "nome": "Modelagem de dados",
+          "descricao": "Modelos relacional e dimensional (fatos e dimensões).",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "qualidade",
+          "nome": "Qualidade de dados",
+          "descricao": "Validações, testes de dados e monitoramento de pipelines.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        },
+        {
+          "id": "linux_git",
+          "nome": "Linux e Git",
+          "descricao": "Linha de comando e controle de versão.",
+          "ferramentas_relacionadas": [
+            "linux",
+            "git"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "SQL avançado",
+        "Python",
+        "Modelagem relacional e dimensional",
+        "ETL/ELT e orquestração",
+        "Data warehouse e data lake",
+        "Qualidade de dados",
+        "Linux e Git"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "SQL (consultas, junções, agregações e funções de janela)",
+          "Python básico para manipulação de arquivos e dados",
+          "Conceitos de bancos de dados relacionais e não relacionais",
+          "Linha de comando e Git"
+        ],
+        "ferramentas_prioritarias": [
+          "Python com Pandas e bibliotecas de acesso a bancos",
+          "Um orquestrador, como Apache Airflow",
+          "Um data warehouse (por exemplo PostgreSQL como treino, depois BigQuery ou similar)",
+          "dbt ou ferramenta equivalente para transformações"
+        ],
+        "competencias_intermediarias": [
+          "Modelagem dimensional (fatos e dimensões)",
+          "Processamento em lote e noções de streaming",
+          "Testes e monitoramento da qualidade dos dados",
+          "Conceitos de nuvem aplicados a dados"
+        ],
+        "praticas_exercicios": [
+          "Construir pipelines pequenos que leiam, limpem e carreguem dados",
+          "Modelar um conjunto de dados em esquema estrela",
+          "Escrever testes de qualidade para cada etapa do pipeline",
+          "Documentar o fluxo de dados com diagramas"
+        ],
+        "oportunidades_junior": [
+          "Publicar pipelines com README e diagrama de arquitetura",
+          "Mostrar decisões de modelagem e de qualidade nos projetos",
+          "Buscar vagas de estágio ou Júnior em dados, BI ou engenharia de dados",
+          "Praticar a explicação de trade-offs de arquitetura"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "AWS Certified Data Engineer – Associate",
+          "emissor": "Amazon Web Services",
+          "observacao": "Voltada a quem usa a AWS."
+        },
+        {
+          "nome": "Google Cloud Professional Data Engineer",
+          "emissor": "Google Cloud",
+          "observacao": "Nível profissional; costuma exigir mais experiência."
+        },
+        {
+          "nome": "Databricks Certified Data Engineer Associate",
+          "emissor": "Databricks"
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Pipeline de dados ponta a ponta com orquestração e testes de qualidade",
+        "descricao": "Pipeline que extrai dados de uma API ou arquivos públicos, transforma, carrega em um banco analítico e é agendado, com testes de qualidade e documentação.",
+        "entregaveis": [
+          "Código do pipeline versionado",
+          "Diagrama de arquitetura",
+          "Testes de qualidade de dados",
+          "README com instruções de execução"
+        ]
+      }
+    },
+    "security": {
+      "nome": "Cibersegurança",
+      "descricao": "Protege sistemas, redes e dados, identificando vulnerabilidades, monitorando ameaças e apoiando a resposta a incidentes.",
+      "caracteristicas": [
+        "Mentalidade investigativa e atenção a detalhes",
+        "Forte base em redes e sistemas operacionais",
+        "Aprendizado contínuo sobre novas ameaças",
+        "Responsabilidade ética e legal (LGPD)"
+      ],
+      "pesos": {
+        "logica": 5,
+        "matematica": 3,
+        "design": 0,
+        "dados": 3,
+        "infra": 8,
+        "seguranca": 10,
+        "automacao": 5,
+        "testes": 3,
+        "mobile": 1,
+        "negocios": 2
+      },
+      "competencias_junior": [
+        {
+          "id": "redes",
+          "nome": "Redes de computadores",
+          "descricao": "TCP/IP, DNS, HTTP/HTTPS, firewalls e análise de tráfego.",
+          "ferramentas_relacionadas": [
+            "redes"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "linux",
+          "nome": "Linux e linha de comando",
+          "descricao": "Administração básica, permissões, logs e processos.",
+          "ferramentas_relacionadas": [
+            "linux"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "fundamentos_seguranca",
+          "nome": "Fundamentos de segurança",
+          "descricao": "Confidencialidade, integridade e disponibilidade; criptografia; controle de acesso.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "vulnerabilidades",
+          "nome": "Análise de vulnerabilidades",
+          "descricao": "OWASP Top 10, varreduras e interpretação de relatórios.",
+          "ferramentas_relacionadas": [
+            "seg_ferramentas"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "scripting",
+          "nome": "Scripting para automação",
+          "descricao": "Automatizar tarefas com Python ou Bash.",
+          "ferramentas_relacionadas": [
+            "python"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "etica_legal",
+          "nome": "Ética e legislação",
+          "descricao": "Boas práticas, escopo autorizado e noções da LGPD.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Redes de computadores",
+        "Linux",
+        "Fundamentos de segurança e criptografia",
+        "OWASP Top 10",
+        "Análise de vulnerabilidades e testes de intrusão (em ambiente autorizado)",
+        "Scripting em Python ou Bash",
+        "Ética e LGPD"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Redes: modelo TCP/IP, DNS, HTTP e firewalls",
+          "Linux e linha de comando",
+          "Princípios de segurança: confidencialidade, integridade e disponibilidade",
+          "Noções de criptografia e gestão de identidade"
+        ],
+        "ferramentas_prioritarias": [
+          "Wireshark para análise de tráfego",
+          "Nmap para mapeamento de redes (apenas em ambientes autorizados)",
+          "Ferramentas de análise de aplicações web, como Burp Suite ou OWASP ZAP",
+          "Python ou Bash para automação"
+        ],
+        "competencias_intermediarias": [
+          "OWASP Top 10 e desenvolvimento seguro",
+          "Análise e priorização de vulnerabilidades",
+          "Logs, monitoramento e noções de SIEM",
+          "Resposta a incidentes em nível introdutório"
+        ],
+        "praticas_exercicios": [
+          "Praticar em laboratórios legais e autorizados (máquinas virtuais próprias e plataformas de treinamento)",
+          "Documentar cada exercício em formato de relatório",
+          "Montar um laboratório doméstico com máquinas virtuais",
+          "Participar de competições de segurança para iniciantes"
+        ],
+        "oportunidades_junior": [
+          "Publicar relatórios e laboratórios documentados, sem expor dados sensíveis",
+          "Atuar sempre dentro de escopo autorizado e com ética",
+          "Buscar vagas de estágio ou Júnior em SOC, suporte de segurança ou análise de vulnerabilidades",
+          "Acompanhar comunidades e boletins de segurança"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "ISC2 Certified in Cybersecurity (CC)",
+          "emissor": "ISC2",
+          "observacao": "Certificação de entrada."
+        },
+        {
+          "nome": "CompTIA Security+",
+          "emissor": "CompTIA",
+          "observacao": "Muito citada como base em segurança."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Laboratório de análise de vulnerabilidades em ambiente controlado",
+        "descricao": "Montar um laboratório com máquinas virtuais próprias, executar varreduras, identificar vulnerabilidades conhecidas e produzir um relatório com riscos e recomendações de correção.",
+        "entregaveis": [
+          "Descrição do laboratório e do escopo",
+          "Relatório de vulnerabilidades e recomendações",
+          "Scripts de apoio versionados",
+          "README com avisos éticos e legais"
+        ]
+      }
+    },
+    "devops": {
+      "nome": "DevOps e SRE",
+      "descricao": "Integra desenvolvimento e operações, automatizando entregas, infraestrutura e monitoramento para manter sistemas confiáveis.",
+      "caracteristicas": [
+        "Automação de entrega e de infraestrutura",
+        "Foco em confiabilidade, observabilidade e desempenho",
+        "Forte base em Linux e redes",
+        "Responsabilidade por monitoramento e resposta a incidentes"
+      ],
+      "pesos": {
+        "logica": 5,
+        "matematica": 1,
+        "design": 0,
+        "dados": 2,
+        "infra": 9,
+        "seguranca": 5,
+        "automacao": 10,
+        "testes": 5,
+        "mobile": 0,
+        "negocios": 2
+      },
+      "competencias_junior": [
+        {
+          "id": "linux",
+          "nome": "Linux e linha de comando",
+          "descricao": "Administração, permissões, processos, serviços e logs.",
+          "ferramentas_relacionadas": [
+            "linux"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "git",
+          "nome": "Git e fluxos de trabalho",
+          "descricao": "Branches, pull requests e estratégias de versionamento.",
+          "ferramentas_relacionadas": [
+            "git"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "docker",
+          "nome": "Contêineres com Docker",
+          "descricao": "Criar imagens, executar contêineres e usar Docker Compose.",
+          "ferramentas_relacionadas": [
+            "docker"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "ci_cd",
+          "nome": "CI/CD",
+          "descricao": "Pipelines de integração e entrega contínuas.",
+          "ferramentas_relacionadas": [
+            "ci_cd"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "monitoramento",
+          "nome": "Monitoramento e observabilidade",
+          "descricao": "Métricas, logs, alertas e painéis.",
+          "ferramentas_relacionadas": [
+            "monitoramento"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "scripting",
+          "nome": "Scripting",
+          "descricao": "Automatizar tarefas com Bash ou Python.",
+          "ferramentas_relacionadas": [
+            "python"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "iac",
+          "nome": "Infraestrutura como código",
+          "descricao": "Descrever infraestrutura de forma versionada.",
+          "ferramentas_relacionadas": [
+            "iac"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Linux e redes",
+        "Git",
+        "Docker",
+        "CI/CD",
+        "Monitoramento e observabilidade",
+        "Scripting",
+        "Infraestrutura como código",
+        "Noções de nuvem"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Linux e linha de comando",
+          "Redes: TCP/IP, DNS e HTTP",
+          "Git e fluxos de trabalho colaborativos",
+          "Princípios de DevOps e do ciclo de vida do software"
+        ],
+        "ferramentas_prioritarias": [
+          "Docker e Docker Compose",
+          "Uma ferramenta de CI/CD, como GitHub Actions ou GitLab CI",
+          "Bash e Python para automação",
+          "Prometheus e Grafana ou ferramentas equivalentes"
+        ],
+        "competencias_intermediarias": [
+          "Infraestrutura como código (por exemplo Terraform)",
+          "Noções de orquestração com Kubernetes",
+          "Observabilidade: métricas, logs e alertas",
+          "Conceitos de SRE: SLI, SLO e gestão de incidentes"
+        ],
+        "praticas_exercicios": [
+          "Containerizar uma aplicação simples",
+          "Criar um pipeline que teste, construa e publique uma aplicação",
+          "Montar um painel de monitoramento com alertas",
+          "Escrever um runbook para um incidente simulado"
+        ],
+        "oportunidades_junior": [
+          "Publicar pipelines e configurações com README e diagramas",
+          "Documentar decisões e procedimentos operacionais",
+          "Buscar vagas de estágio ou Júnior em DevOps, infraestrutura ou suporte avançado",
+          "Acompanhar comunidades e relatos públicos de incidentes (postmortems)"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "HashiCorp Certified: Terraform Associate",
+          "emissor": "HashiCorp",
+          "observacao": "Útil se a vaga usar Terraform."
+        },
+        {
+          "nome": "Certified Kubernetes Administrator (CKA)",
+          "emissor": "Linux Foundation / CNCF",
+          "observacao": "Nível mais avançado; costuma exigir prática prévia."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Pipeline CI/CD com contêineres e monitoramento",
+        "descricao": "Aplicação simples containerizada com pipeline de testes e implantação automatizada e painel de monitoramento com alertas.",
+        "entregaveis": [
+          "Dockerfile e Docker Compose",
+          "Pipeline de CI/CD versionado",
+          "Painel de monitoramento",
+          "README com diagrama e instruções"
+        ]
+      }
+    },
+    "cloud": {
+      "nome": "Computação em Nuvem e Cloud Architecture",
+      "descricao": "Projeta, implanta e opera infraestrutura e serviços em provedores de nuvem, equilibrando escalabilidade, segurança e custo.",
+      "caracteristicas": [
+        "Visão de arquitetura e de serviços gerenciados",
+        "Atenção a segurança, permissões e custos",
+        "Uso de infraestrutura como código",
+        "Conhecimento de redes e sistemas operacionais"
+      ],
+      "pesos": {
+        "logica": 4,
+        "matematica": 1,
+        "design": 0,
+        "dados": 3,
+        "infra": 10,
+        "seguranca": 6,
+        "automacao": 7,
+        "testes": 2,
+        "mobile": 0,
+        "negocios": 4
+      },
+      "competencias_junior": [
+        {
+          "id": "redes",
+          "nome": "Redes",
+          "descricao": "Sub-redes, roteamento, DNS e balanceamento de carga.",
+          "ferramentas_relacionadas": [
+            "redes"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "servicos_nuvem",
+          "nome": "Serviços de nuvem",
+          "descricao": "Computação, armazenamento, bancos e redes em um provedor (AWS, Azure ou Google Cloud).",
+          "ferramentas_relacionadas": [
+            "nuvem"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "iam",
+          "nome": "Identidade e permissões",
+          "descricao": "Controle de acesso e princípio do menor privilégio.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "iac",
+          "nome": "Infraestrutura como código",
+          "descricao": "Descrever e reproduzir infraestrutura com código.",
+          "ferramentas_relacionadas": [
+            "iac"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "linux",
+          "nome": "Linux",
+          "descricao": "Administração básica de servidores.",
+          "ferramentas_relacionadas": [
+            "linux"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "custos_seguranca",
+          "nome": "Custos e segurança na nuvem",
+          "descricao": "Estimar custos, aplicar boas práticas e revisar configurações.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Redes e Linux",
+        "Conceitos de computação em nuvem",
+        "Serviços de um provedor (AWS, Azure ou Google Cloud)",
+        "Identidade e permissões",
+        "Infraestrutura como código",
+        "Custos e segurança"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Redes: IP, sub-redes, DNS e balanceamento de carga",
+          "Linux e linha de comando",
+          "Conceitos de nuvem: IaaS, PaaS, SaaS e modelo de responsabilidade compartilhada",
+          "Virtualização e contêineres em nível introdutório"
+        ],
+        "ferramentas_prioritarias": [
+          "Um provedor de nuvem (AWS, Azure ou Google Cloud), usando o nível gratuito com atenção aos limites",
+          "Terraform ou ferramenta de IaC equivalente",
+          "CLI do provedor",
+          "Docker"
+        ],
+        "competencias_intermediarias": [
+          "Identidade e permissões (IAM)",
+          "Redes na nuvem (VPC e sub-redes)",
+          "Boas práticas de segurança e de custos",
+          "Arquiteturas escaláveis e tolerantes a falhas"
+        ],
+        "praticas_exercicios": [
+          "Implantar uma aplicação web simples na nuvem",
+          "Reproduzir a mesma infraestrutura com código",
+          "Configurar alertas de custo para evitar cobranças inesperadas",
+          "Desenhar diagramas de arquitetura e justificar escolhas"
+        ],
+        "oportunidades_junior": [
+          "Publicar diagramas e código de infraestrutura com README",
+          "Documentar custos estimados e decisões de segurança",
+          "Buscar vagas de estágio ou Júnior em cloud, infraestrutura ou suporte em nuvem",
+          "Acompanhar a documentação oficial do provedor escolhido"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "AWS Certified Cloud Practitioner",
+          "emissor": "Amazon Web Services",
+          "observacao": "Certificação de entrada."
+        },
+        {
+          "nome": "Microsoft Azure Fundamentals (AZ-900)",
+          "emissor": "Microsoft",
+          "observacao": "Certificação de entrada."
+        },
+        {
+          "nome": "Google Cloud Digital Leader",
+          "emissor": "Google Cloud",
+          "observacao": "Certificação de entrada."
+        },
+        {
+          "nome": "AWS Certified Solutions Architect – Associate",
+          "emissor": "Amazon Web Services",
+          "observacao": "Nível intermediário."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Aplicação web na nuvem com infraestrutura como código",
+        "descricao": "Implantar uma aplicação simples em um provedor de nuvem, descrevendo rede, servidores e permissões em código, com diagrama de arquitetura e estimativa de custos.",
+        "entregaveis": [
+          "Código de infraestrutura versionado",
+          "Diagrama de arquitetura",
+          "Estimativa de custos e decisões de segurança",
+          "README com passos de implantação e de remoção dos recursos"
+        ]
+      }
+    },
+    "mobile": {
+      "nome": "Desenvolvimento Mobile",
+      "descricao": "Desenvolve aplicativos para celulares e tablets, cuidando de interface, desempenho, integração com APIs e particularidades dos dispositivos.",
+      "caracteristicas": [
+        "Foco em interfaces móveis e experiência de uso",
+        "Programação aplicada a telas, navegação e ciclo de vida",
+        "Integração com APIs e armazenamento local",
+        "Publicação em lojas de aplicativos"
+      ],
+      "pesos": {
+        "logica": 7,
+        "matematica": 1,
+        "design": 7,
+        "dados": 2,
+        "infra": 1,
+        "seguranca": 3,
+        "automacao": 2,
+        "testes": 4,
+        "mobile": 10,
+        "negocios": 4
+      },
+      "competencias_junior": [
+        {
+          "id": "framework",
+          "nome": "Framework ou plataforma móvel",
+          "descricao": "Dominar um framework (Flutter, React Native) ou plataforma nativa (Kotlin/Android, Swift/iOS).",
+          "ferramentas_relacionadas": [
+            "mobile_framework"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "navegacao",
+          "nome": "Navegação e ciclo de vida",
+          "descricao": "Fluxo de telas, estados e ciclo de vida do aplicativo.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "apis",
+          "nome": "Consumo de APIs",
+          "descricao": "Requisições HTTP, tratamento de erros e estados de carregamento.",
+          "ferramentas_relacionadas": [
+            "apis_rest"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "persistencia",
+          "nome": "Persistência local",
+          "descricao": "Armazenar dados no dispositivo (SQLite, preferências ou equivalentes).",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        },
+        {
+          "id": "ui_mobile",
+          "nome": "Interfaces móveis",
+          "descricao": "Layouts adaptáveis e boas práticas de usabilidade em telas pequenas.",
+          "ferramentas_relacionadas": [
+            "figma"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "git",
+          "nome": "Git e trabalho colaborativo",
+          "descricao": "Branches, commits e pull requests.",
+          "ferramentas_relacionadas": [
+            "git"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Uma linguagem e um framework móvel",
+        "Navegação e gerenciamento de estado",
+        "Consumo de APIs",
+        "Persistência local",
+        "Design de interfaces móveis",
+        "Git e GitHub"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Lógica de programação e orientação a objetos",
+          "Linguagem do framework escolhido (Dart, JavaScript/TypeScript, Kotlin ou Swift)",
+          "Princípios de design de interfaces móveis",
+          "Conceitos de HTTP e APIs"
+        ],
+        "ferramentas_prioritarias": [
+          "Um framework móvel (Flutter ou React Native) ou a plataforma nativa escolhida",
+          "Emuladores e depuração em dispositivo",
+          "Figma para prototipar telas",
+          "Git"
+        ],
+        "competencias_intermediarias": [
+          "Navegação, gerenciamento de estado e ciclo de vida",
+          "Consumo de APIs e tratamento de erros",
+          "Persistência local de dados",
+          "Testes e noções de publicação nas lojas"
+        ],
+        "praticas_exercicios": [
+          "Reproduzir telas de aplicativos conhecidos",
+          "Criar um aplicativo com várias telas e navegação",
+          "Integrar o aplicativo a uma API pública",
+          "Testar em dispositivos e tamanhos de tela diferentes"
+        ],
+        "oportunidades_junior": [
+          "Publicar o código e capturas de tela do aplicativo no GitHub",
+          "Se possível, publicar um aplicativo simples em teste interno",
+          "Buscar vagas de estágio ou Júnior em desenvolvimento mobile",
+          "Documentar decisões de interface e de arquitetura"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "Certificados de cursos de Flutter, React Native, Kotlin ou Swift",
+          "emissor": "Diversos emissores",
+          "observacao": "Não há uma certificação única exigida; o portfólio costuma ter mais peso."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Aplicativo móvel com consumo de API e dados locais",
+        "descricao": "Aplicativo com várias telas, navegação, consumo de uma API pública, persistência local e protótipo prévio no Figma.",
+        "entregaveis": [
+          "Código no GitHub com README",
+          "Capturas de tela ou vídeo curto de demonstração",
+          "Protótipo no Figma",
+          "Instruções de execução"
+        ]
+      }
+    },
+    "qa": {
+      "nome": "Engenharia de Qualidade e Testes (QA)",
+      "descricao": "Garante a qualidade do software com planejamento de testes, testes exploratórios, automação e comunicação clara de defeitos.",
+      "caracteristicas": [
+        "Olhar crítico e atenção a detalhes",
+        "Combinação de testes manuais e automatizados",
+        "Comunicação clara com desenvolvedores e produto",
+        "Foco em prevenção de defeitos e confiabilidade"
+      ],
+      "pesos": {
+        "logica": 5,
+        "matematica": 1,
+        "design": 2,
+        "dados": 3,
+        "infra": 2,
+        "seguranca": 3,
+        "automacao": 6,
+        "testes": 10,
+        "mobile": 3,
+        "negocios": 5
+      },
+      "competencias_junior": [
+        {
+          "id": "casos_teste",
+          "nome": "Casos de teste",
+          "descricao": "Projetar casos a partir de requisitos, com cenários positivos, negativos e de borda.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "exploratorios",
+          "nome": "Testes exploratórios",
+          "descricao": "Investigar o sistema sem roteiro fixo, registrando descobertas.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "automacao",
+          "nome": "Automação de testes",
+          "descricao": "Automatizar testes de interface ou de API com ferramentas como Selenium, Cypress ou pytest.",
+          "ferramentas_relacionadas": [
+            "testes_auto"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "defeitos",
+          "nome": "Documentação de defeitos",
+          "descricao": "Relatar falhas com passos de reprodução, evidências e severidade.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "apis_sql",
+          "nome": "Testes de API e noções de SQL",
+          "descricao": "Testar endpoints e consultar dados para validar resultados.",
+          "ferramentas_relacionadas": [
+            "apis_rest",
+            "sql"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "agil",
+          "nome": "Metodologias ágeis",
+          "descricao": "Atuar em times que usam Scrum ou Kanban.",
+          "ferramentas_relacionadas": [
+            "agil"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "git",
+          "nome": "Git",
+          "descricao": "Versionar scripts e documentos de teste.",
+          "ferramentas_relacionadas": [
+            "git"
+          ],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Fundamentos de teste de software",
+        "Técnicas de projeto de casos de teste",
+        "Testes exploratórios",
+        "Automação de testes",
+        "Testes de API",
+        "Noções de SQL",
+        "Metodologias ágeis"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Fundamentos de teste de software (níveis, tipos e técnicas)",
+          "Técnicas de projeto de casos de teste: partição de equivalência e valores-limite",
+          "Lógica de programação básica",
+          "Ciclo de vida do software e metodologias ágeis"
+        ],
+        "ferramentas_prioritarias": [
+          "Uma ferramenta de gestão de testes e de defeitos (por exemplo Jira)",
+          "Uma ferramenta de automação de interface (Selenium, Cypress ou Playwright)",
+          "Postman para testes de API",
+          "Git"
+        ],
+        "competencias_intermediarias": [
+          "Automação de testes com uma linguagem (Python ou JavaScript)",
+          "Testes de API e noções de SQL",
+          "Integração de testes em pipelines de CI",
+          "Testes de desempenho e de acessibilidade em nível introdutório"
+        ],
+        "praticas_exercicios": [
+          "Escrever casos de teste para aplicações reais ou de demonstração",
+          "Fazer sessões de testes exploratórios e registrar os achados",
+          "Automatizar um fluxo completo de uma aplicação web",
+          "Redigir relatórios de defeitos claros e reproduzíveis"
+        ],
+        "oportunidades_junior": [
+          "Publicar planos de teste e automações no GitHub",
+          "Mostrar exemplos de relatórios de defeitos bem escritos",
+          "Buscar vagas de estágio ou Júnior em QA e testes",
+          "Praticar a explicação dos riscos e da cobertura de testes"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "ISTQB Certified Tester – Foundation Level (CTFL)",
+          "emissor": "ISTQB (no Brasil, via BSTQB)",
+          "observacao": "Cobre vocabulário e fundamentos de testes."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Plano de testes e automação para uma aplicação web",
+        "descricao": "Plano de testes, casos documentados, relatório de testes exploratórios, defeitos registrados e suíte automatizada de interface e de API.",
+        "entregaveis": [
+          "Plano e casos de teste",
+          "Suíte automatizada versionada",
+          "Relatórios de defeitos",
+          "README com instruções de execução"
+        ]
+      }
+    },
+    "product": {
+      "nome": "Gestão de Produtos (Product Management)",
+      "descricao": "Descobre problemas de usuários e oportunidades de negócio, define o que será construído e orienta o time por meio de priorização e métricas.",
+      "caracteristicas": [
+        "Foco em usuários, negócio e priorização",
+        "Comunicação constante com times técnicos e áreas de negócio",
+        "Decisões apoiadas em pesquisa e métricas",
+        "Visão do produto de ponta a ponta"
+      ],
+      "pesos": {
+        "logica": 3,
+        "matematica": 3,
+        "design": 5,
+        "dados": 6,
+        "infra": 0,
+        "seguranca": 1,
+        "automacao": 2,
+        "testes": 2,
+        "mobile": 2,
+        "negocios": 10
+      },
+      "competencias_junior": [
+        {
+          "id": "discovery",
+          "nome": "Descoberta de produto (discovery)",
+          "descricao": "Entrevistar usuários, mapear problemas e validar hipóteses.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "historias",
+          "nome": "Histórias de usuário e requisitos",
+          "descricao": "Escrever histórias com critérios de aceite claros.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "priorizacao",
+          "nome": "Priorização",
+          "descricao": "Usar critérios como valor, esforço e risco (por exemplo RICE ou MoSCoW).",
+          "ferramentas_relacionadas": [],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "metricas",
+          "nome": "Métricas de produto",
+          "descricao": "Definir indicadores, analisar dados de uso e tomar decisões com base neles.",
+          "ferramentas_relacionadas": [
+            "planilhas_bi",
+            "sql"
+          ],
+          "prioridade": "essencial"
+        },
+        {
+          "id": "agil",
+          "nome": "Metodologias ágeis",
+          "descricao": "Scrum, Kanban, cerimônias e gestão de backlog.",
+          "ferramentas_relacionadas": [
+            "agil"
+          ],
+          "prioridade": "importante"
+        },
+        {
+          "id": "comunicacao",
+          "nome": "Comunicação com stakeholders",
+          "descricao": "Alinhar expectativas e apresentar decisões de forma clara.",
+          "ferramentas_relacionadas": [],
+          "prioridade": "importante"
+        }
+      ],
+      "conhecimentos_recomendados": [
+        "Descoberta de produto e pesquisa com usuários",
+        "Histórias de usuário e requisitos",
+        "Priorização",
+        "Métricas de produto",
+        "Metodologias ágeis",
+        "Noções de UX e de tecnologia",
+        "Comunicação"
+      ],
+      "roadmap": {
+        "fundamentos": [
+          "Conceitos de produto: problema, solução, valor e mercado",
+          "Metodologias ágeis: Scrum e Kanban",
+          "Noções de UX e de pesquisa com usuários",
+          "Noções básicas de tecnologia e de como times de software trabalham"
+        ],
+        "ferramentas_prioritarias": [
+          "Uma ferramenta de backlog e quadros (Jira, Trello ou similar)",
+          "Planilhas para análise de dados e métricas",
+          "Ferramentas de prototipação simples, como Figma",
+          "Documentos e quadros colaborativos para roteiros e requisitos"
+        ],
+        "competencias_intermediarias": [
+          "Técnicas de priorização (RICE, MoSCoW, Kano)",
+          "Definição de métricas (por exemplo, métricas de aquisição, ativação e retenção)",
+          "Roadmap de produto e gestão de stakeholders",
+          "Noções de SQL para consultar dados de uso"
+        ],
+        "praticas_exercicios": [
+          "Entrevistar pessoas sobre um problema real e sintetizar aprendizados",
+          "Escrever histórias de usuário com critérios de aceite",
+          "Priorizar um backlog fictício justificando os critérios",
+          "Analisar um produto conhecido e propor melhorias com base em métricas"
+        ],
+        "oportunidades_junior": [
+          "Publicar estudos de caso de produto com problema, hipótese, solução e métricas",
+          "Participar de projetos de times ou de iniciativas voluntárias como responsável pelo produto",
+          "Buscar vagas de estágio, Júnior ou analista em produto, negócios ou projetos",
+          "Praticar apresentações de decisões de produto"
+        ]
+      },
+      "certificacoes_opcionais": [
+        {
+          "nome": "Professional Scrum Product Owner I (PSPO I)",
+          "emissor": "Scrum.org"
+        },
+        {
+          "nome": "Certified Scrum Product Owner (CSPO)",
+          "emissor": "Scrum Alliance",
+          "observacao": "Normalmente exige participação em curso do emissor."
+        }
+      ],
+      "projeto_portfolio": {
+        "titulo": "Estudo de caso de produto: da descoberta ao roadmap",
+        "descricao": "Escolha um problema real, realize entrevistas, defina personas e hipóteses, escreva histórias de usuário, priorize o backlog, proponha métricas de sucesso e monte um roadmap inicial.",
+        "entregaveis": [
+          "Resumo das entrevistas e aprendizados",
+          "Histórias de usuário e backlog priorizado",
+          "Métricas de sucesso propostas",
+          "Protótipo simples e roadmap inicial (documento ou apresentação)"
+        ]
+      }
+    }
+  }
+}

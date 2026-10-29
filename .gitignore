@@ -1,0 +1,13 @@
+# Ambiente virtual e caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
